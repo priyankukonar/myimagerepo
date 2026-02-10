@@ -1,0 +1,60 @@
+{
+  "api-key": "V29vZGxhbmQtS29sa2F0YQ==",
+  "baseURL": "/home/hsdocker/code",
+  "chromePath": "/usr/bin/google-chrome-stable",
+  "logPath": "hs-main.log",
+  "security": { "refresh_interval": "60000" },
+  "reports": {
+    "id_report": {
+      "csv": "reports/omegaid",
+      "pdf": "pdfs/omegaid",
+      "reportSettings": {
+        "viraltemplate": true,
+        "showPatientSummary": true,
+        "space": 10,
+        "remotePatientSummaryURL": "http://www.infexn.com/clientimages/SL-GOA/sl_goa_header.png",
+        "remotePatientSummaryURL2": "http://www.infexn.com/clientimages/SL-GOA/sl_goa_header_2.png",
+        "remotePatientSummaryURL3": "http://www.infexn.com/clientimages/SL-GOA/sl_goa_header_3.png",
+        "remotePatientSummaryURL4": "http://www.infexn.com/clientimages/SL-GOA/sl_goa_header_4.png",
+        "showRemotePatientSummary": true,
+        "remoteFooterURL": "http://www.infexn.com/clientimages/SL-GOA/sl_goa_footer.png",
+        "remoteFooterURL2": "http://www.infexn.com/clientimages/SL-GOA/sl_goa_footer_2.png",
+        "remoteFooterURL3": "http://www.infexn.com/clientimages/SL-GOA/sl_goa_footer_3.png",
+        "remoteFooterURL4": "http://www.infexn.com/clientimages/SL-GOA/sl_goa_footer_4.png",
+        "showFooter": true,
+        "height": -1,
+        "width": 0,
+        "headerHeight": "160",
+        "remoteSignatureURL": "http://www.infexn.com/clientimages/SL-GOA/sl_goa_signature.png",
+        "signatureHeight": "160"
+      }
+    },
+    "tb_report": { "csv": "otbreports", "pdf": "pdfs" }
+  },
+  "sequencer": {
+    "path": "minknow",
+    "tbPath": "samples/omegatb/staging",
+    "threshold": 5,
+    "reportPattern": "report_",
+    "registrationPath": "samples/omegaid/registrations"
+  },
+  "analyzer": {
+    "path": "logs/omegaid",
+    "completionIdentification": "Analysis completed",
+    "tbPath": "logs/omegatb",
+    "threshold": 500,
+    "loop": 44,
+    "extension": "log"
+  },
+  "metrics": {
+    "file_threshold": 100,
+    "max_read": 1000,
+    "read_from_file": false,
+    "observe_file_in_snapshot": false
+  },
+  "download": {
+    "batch_metadata": { "in_main": true, "desired_path": "Metadata" }
+  },
+  "winston_log_db_url": "mongodb+srv://OmegaAdmin:OmegaPassword123@hs-dev-db-cluster.xslr9.mongodb.net/OmegaDB?retryWrites=true&w=majority",
+  "image_tag": { "omega_id": "3.13", "omega_tb": "latest" }
+}
